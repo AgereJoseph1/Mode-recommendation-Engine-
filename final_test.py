@@ -53,9 +53,9 @@ class AdvancedUseCaseRecommender:
                 try:
                     self.client = MongoClient(
                         mongodb_uri,
-                        ssl=True,
-                        ssl_cert_reqs='CERT_NONE',
-                        tlsCAFile=certifi.where(),
+                        tls=True,  # Use 'tls' instead of 'ssl'
+                        tlsAllowInvalidCertificates=True,  # Skip certificate verification
+                        tlsCAFile=certifi.where(),  # Use the CA certificates
                         connectTimeoutMS=30000,
                         serverSelectionTimeoutMS=30000,
                         retryWrites=True,
