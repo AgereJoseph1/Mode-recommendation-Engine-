@@ -45,7 +45,7 @@ pydantic==2.10.3
 pydantic_core==2.27.1
 pydeck==0.9.1
 Pygments==2.18.0
-pymongo==4.7.2
+pymongo[srv]==3.12.0
 python-dateutil==2.9.0.post0
 pytz==2024.2
 PyYAML==6.0.2
